@@ -1,13 +1,13 @@
-import numpy
-import time
-import sys
-import subprocess
 import os
 import random
+import subprocess
+import sys
+import time
 
+import numpy
 from is13.data import load
-from is13.rnn.jordan import model
 from is13.metrics.accuracy import conlleval
+from is13.rnn.jordan import model
 from is13.utils.tools import shuffle, minibatch, contextwin
 
 if __name__ == '__main__':

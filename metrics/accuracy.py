@@ -1,8 +1,10 @@
 import os
-import stat
 import subprocess
-from os.path import isfile
 from os import chmod
+from os.path import isfile
+
+import stat
+
 
 def conlleval(p, g, w, filename):
     '''
@@ -32,12 +34,15 @@ def conlleval(p, g, w, filename):
 
 
 def get_perf(filename):
-    ''' run conlleval.pl perl script to obtain
-    precision/recall and F1 score '''
+    '''
+    run conlleval.pl perl script to obtain
+    precision/recall and F1 score
+    '''
     _conlleval = 'metrics/conlleval.pl'
     if not isfile(_conlleval):
         # download('http://www-etud.iro.umontreal.ca/~mesnilgr/atis/conlleval.pl')
-        os.system('wget https://www.comp.nus.edu.sg/%7Ekanmy/courses/practicalNLP_2008/packages/conlleval.pl -O' + _conlleval)
+        os.system(
+            'wget https://www.comp.nus.edu.sg/%7Ekanmy/courses/practicalNLP_2008/packages/conlleval.pl -O' + _conlleval)
         chmod('conlleval.pl', stat.S_IRWXU)  # give the execute permissions
 
     proc = subprocess.Popen(["perl", _conlleval], stdin=subprocess.PIPE, stdout=subprocess.PIPE)

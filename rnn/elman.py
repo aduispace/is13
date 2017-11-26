@@ -1,9 +1,9 @@
-import theano
-import numpy
 import os
-
-from theano import tensor as T
 from collections import OrderedDict
+
+import numpy
+import theano
+from theano import tensor as T
 
 
 class model(object):

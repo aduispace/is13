@@ -1,12 +1,12 @@
-import numpy as np
-import time
-import sys
-import subprocess
 import os
 import random
+import subprocess
+import sys
+import time
 
+import numpy as np
+from keras.layers import Embedding, SimpleRNN, Dense, Activation, TimeDistributed
 from keras.models import Sequential
-from keras.layers import Input, Embedding, SimpleRNN, Dense, Activation, TimeDistributed
 from keras.optimizers import SGD
 from keras.utils.np_utils import to_categorical
 

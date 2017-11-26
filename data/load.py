@@ -1,10 +1,9 @@
 import gzip
-import _pickle as cPickle
-import urllib.request
 import os
-
 from os.path import isfile
 
+import _pickle as cPickle
+import urllib.request
 
 
 def download(origin):

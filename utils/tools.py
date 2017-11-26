@@ -12,7 +12,6 @@ def shuffle(lol, seed):
         random.seed(seed)
         random.shuffle(l)
 
-
 # def minibatch(l, bs):
 #     '''
 #     l :: list of word idxs
