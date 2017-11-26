@@ -20,7 +20,7 @@ We also have a follow-up IEEE paper:
 This code allows to get state-of-the-art results and a significant improvement
 (+1% in F1-score) with respect to the results presented in the paper.
 
-Run the following commands:
+Run the following commands (test):
 
 ```
 git clone https://github.com/Liang-Qiu/is13.git
