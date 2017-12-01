@@ -23,7 +23,7 @@ if __name__ == '__main__':
          'nhidden': 100,  # number of hidden units
          'seed': 345,
          'emb_dimension': 100,  # dimension of word embedding
-         'nepochs': 5}
+         'nepochs': 50}
 
     folder = os.path.join('out/', os.path.basename(__file__).split('.')[0])  # folder = 'out/elman-keras'
     os.makedirs(folder, exist_ok=True)
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     nclasses = len(dic['labels2idx'])
     nsentences = len(train_lex)
 
-    # instanciate the model
+    # instantiate the model
     np.random.seed(s['seed'])
     random.seed(s['seed'])
 

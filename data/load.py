@@ -62,7 +62,7 @@ if __name__ == '__main__':
 
     # w2ne, w2la = {}, {}  # word2named_entities, word2labels
     # train, test, dic = atisfull()
-    train, _, test, dic = atisfold(1)
+    train, _, test, dic = atisfold(0)
 
     w2idx, ne2idx, labels2idx = dic['words2idx'], dic['tables2idx'], dic['labels2idx']
 
@@ -75,9 +75,12 @@ if __name__ == '__main__':
     wlength = 35
 
     for e in ['train', 'test']:
+        nsentence = 0
         for sw, se, sl in zip(eval(e + '_x'), eval(e + '_ne'), eval(e + '_label')):  # one sentence
+            nsentence += 1
+            print('Number of sentences:', nsentence)
             print('WORD'.rjust(wlength), 'LABEL'.rjust(wlength))  # text is aligned along the right margin
             for wx, la in zip(sw, sl):  # one word
                 print(idx2w[wx].rjust(wlength), idx2la[la].rjust(wlength))
             print('\n' + '**' * 30 + '\n')
-            pdb.set_trace()  # python debugger
+            # pdb.set_trace()  # python debugger
